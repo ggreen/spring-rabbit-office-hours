@@ -1,35 +1,49 @@
 package io.cloudNativeData.spring.rabbit.streams;
 
-import com.rabbitmq.stream.Environment;
-import io.cloudNativeData.spring.rabbit.streams.domain.financial.FixEvent;
+import io.cloudNativeData.spring.rabbit.streams.domain.financial.ActionEvent;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.amqp.support.converter.JacksonJsonMessageConverter;
-import org.springframework.boot.ApplicationRunner;
+import nyla.solutions.core.io.csv.CsvReader;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.rabbit.stream.producer.RabbitStreamTemplate;
-import tools.jackson.databind.json.JsonMapper;
+import org.springframework.core.io.Resource;
+
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.List;
+import java.util.function.Supplier;
 
 @Configuration
 @Slf4j
 public class PublisherConfig {
 
-    @Bean
-    RabbitStreamTemplate rabbitStreamTemplate(Environment environment,
-                                              JsonMapper jsonMapper)
-    {
-        var template = new RabbitStreamTemplate(environment,"events.spring.io");
-        template.setMessageConverter(new JacksonJsonMessageConverter(jsonMapper));
+    //@org.springframework.beans.factory.annotation.Value("classpath:csv/additional/events.csv")
+    //classpath:csv/financial/events.csv
+    //classpath:csv/spring-io-session-events.csv
+     @Value("classpath:csv/financial/events.csv")
+    private Resource resource;
 
-        return template;
+    @Bean
+    Iterator<List<String>> csvLines() throws IOException {
+        return new CsvReader(resource.getFile()).stream().iterator();
     }
 
+
     @Bean
-    ApplicationRunner applicationRunner(RabbitStreamTemplate rabbitStreamTemplate) {
-        return args -> {
-            log.info("Publishing Spring IO events");
-            rabbitStreamTemplate.convertAndSend(FixEvent.builder().event("Welcome to RabbitMQ session")
-                    .build());
+    Supplier<ActionEvent> eventPublisher(Iterator<List<String>> csvLines) {
+
+        return () -> {
+            if(csvLines.hasNext()) {
+                var line = csvLines.next();
+                log.info("Events {}",line);
+                return  ActionEvent.builder()
+                        .event(line.getFirst())
+                        .account(line.get(1))
+                        .time(line.get(2))
+                        .id(line.get(3))
+                        .build();
+            }
+            return null;
         };
     }
 }

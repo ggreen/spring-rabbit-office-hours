@@ -3,5 +3,5 @@ package io.cloudNativeData.spring.rabbit.streams.domain.financial;
 import lombok.Builder;
 
 @Builder
-public record FixEvent(String id, String event) {
+public record ActionEvent(String id, String account, String event, String time) {
 }
