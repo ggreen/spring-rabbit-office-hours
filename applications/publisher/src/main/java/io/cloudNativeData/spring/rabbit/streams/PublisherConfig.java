@@ -1,5 +1,6 @@
 package io.cloudNativeData.spring.rabbit.streams;
 
+import io.cloudNativeData.spring.rabbit.streams.domain.SpringIoEvent;
 import io.cloudNativeData.spring.rabbit.streams.domain.financial.ActionEvent;
 import lombok.extern.slf4j.Slf4j;
 import nyla.solutions.core.io.csv.CsvReader;
@@ -7,6 +8,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
+import org.springframework.messaging.Message;
+import org.springframework.messaging.support.MessageBuilder;
 
 import java.io.IOException;
 import java.util.Iterator;
@@ -18,9 +21,8 @@ import java.util.function.Supplier;
 public class PublisherConfig {
 
     //@org.springframework.beans.factory.annotation.Value("classpath:csv/additional/events.csv")
-    //classpath:csv/financial/events.csv
-    //classpath:csv/spring-io-session-events.csv
-     @Value("classpath:csv/financial/events.csv")
+    @Value("classpath:csv/financial/events.csv")
+//    @Value("classpath:csv/spring-io-session-events.csv")
     private Resource resource;
 
     @Bean
@@ -29,18 +31,25 @@ public class PublisherConfig {
     }
 
 
+
+    //TODO: Publisher application.properties MUST match the super stream name
     @Bean
-    Supplier<ActionEvent> eventPublisher(Iterator<List<String>> csvLines) {
+    Supplier<Message<ActionEvent>> eventPublisher(Iterator<List<String>> csvLines) {
 
         return () -> {
-            if(csvLines.hasNext()) {
+            if (csvLines.hasNext()) {
                 var line = csvLines.next();
-                log.info("Events {}",line);
-                return  ActionEvent.builder()
-                        .event(line.getFirst())
+                var event = ActionEvent.builder()
+                        .event(line.get(0))
                         .account(line.get(1))
-                        .time(line.get(2))
-                        .id(line.get(3))
+                        .type(line.get(2))
+                        .build();
+
+                log.info("sending: {}",event);
+
+                return MessageBuilder.withPayload(event)
+                        .setHeader("account", event.account())
+                        .setHeader("type", event.type())
                         .build();
             }
             return null;
