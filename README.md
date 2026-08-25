@@ -1,4 +1,4 @@
-Spring RabbitMQ Office Hours
+# Spring RabbitMQ Office Hours
 
 Demonstration repository showcasing **RabbitMQ Streaming capabilities** within **Spring Boot** applications, featuring Super Streams, SQL filtering, and scalable event-driven architectures.
 
