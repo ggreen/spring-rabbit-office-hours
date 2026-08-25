@@ -6,10 +6,10 @@
 "pan: 4111XXXXXX1111, amount: 1.01, date: '1-7-2026 19:19:32' terminal_id: TERM_88291, merchant_id: MERCH_55432","josiah","SALE","07:19 PM","06"
 "pan: 4111XXXXXX1111, amount: 5.01, date: '1-7-2026 19:20:32' terminal_id: TERM_88291, merchant_id: MERCH_5555","josiah","SALE","07:20 PM","07"
 "pan: 4111XXXXXX1111, amount: 100.00, date: '1-7-2026 19:12:34' terminal_id: TERM_88291, merchant_id: MERCH_55432,"josiah","SALE","07:15 PM","08"
-"Opened new credit card account", "nyla","ACCOUNT","06:30 PM","09",
-"Account statements shipped to home address", "nyla", "ACCOUNT","06:31 PM","10",
-"Wire transfer  of amount above threshold", "nyla", "ACCOUNT","06:33 PM","11",
-"Visa credit card download to digital wallet", "nyla", "ACCOUNT","06:31 PM","12",
+"Opened new credit card account", "nyla","ACCOUNT","06:30 PM","09"
+"Account statements shipped to home address", "nyla", "ACCOUNT","06:31 PM","10"
+"Wire transfer  of amount above threshold", "nyla", "ACCOUNT","06:33 PM","11"
+"Visa credit card download to digital wallet", "nyla", "ACCOUNT","06:31 PM","12"
 "pan: 4111XXXXXX2222, amount: 100.00, date: 1-7-2026 19:12:34 terminal_id: TERM_88291, merchant_id: MERCH_55432","imani","SALE","07:15 PM","01"
 "pan: 4111XXXXXX2222, amount: 100.00, date: '1-7-2026 19:12:34' terminal_id: TERM_88291, merchant_id: MERCH_55432","imani","SALE","07:15 PM","02"
 "pan: 4111XXXXXX2222, amount: 1000.01, date: '1-7-2026 19:17:32' terminal_id: TERM_88291, merchant_id: MERCH_5555","imani","SALE","07:17 PM","03"
@@ -34,14 +34,38 @@
 "pan: 4333XXXXXX3333, amount: 1.01, date: '1-7-2026 19:19:32' terminal_id: TERM_88291, merchant_id: MERCH_55432","john","SALE","07:19 PM","06"
 "pan: 4333XXXXXX3333, amount: 5.01, date: '1-7-2026 19:20:32' terminal_id: TERM_88291, merchant_id: MERCH_5555","john","SALE","07:20 PM","07"
 "pan: 4333XXXXXX3333, amount: 100.00, date: '1-7-2026 19:12:34' terminal_id: TERM_88291, merchant_id: MERCH_55432,"john","SALE","07:15 PM","08"
-"Opened new credit card account", "john","ACCOUNT","06:30 PM","09",
-"Account statements shipped to home address", "john", "ACCOUNT","06:31 PM","10",
-"Wire transfer  of amount above threshold", "john", "ACCOUNT","06:33 PM","11",
-"Visa credit card download to digital wallet", "john", "ACCOUNT","06:31 PM","12",
-"Opened new credit card account", "imani","ACCOUNT","06:30 PM","09",
-"Account statements shipped to home address", "imani", "ACCOUNT","06:31 PM","10",
-"Wire transfer  of amount above threshold", "imani", "ACCOUNT","06:33 PM","11",
-"Visa credit card download to digital wallet", "imani", "ACCOUNT","06:31 PM","12",
-"Account statements shipped to home address", "nyla", "ACCOUNT","06:31 PM","10",
-"Wire transfer  of amount above threshold", "nyla", "ACCOUNT","06:33 PM","11",
-"Visa credit card download to digital wallet", "nyla", "ACCOUNT","06:31 PM","12",
+"Opened new credit card account", "john","ACCOUNT","06:30 PM","09"
+"Account statements shipped to home address", "john", "ACCOUNT","06:31 PM","10"
+"Wire transfer  of amount above threshold", "john", "ACCOUNT","06:33 PM","11"
+"Visa credit card download to digital wallet", "john", "ACCOUNT","06:31 PM","12"
+"Opened new credit card account", "imani","ACCOUNT","06:30 PM","09"
+"Account statements shipped to home address", "imani", "ACCOUNT","06:31 PM","10"
+"Wire transfer  of amount above threshold", "imani", "ACCOUNT","06:33 PM","11"
+"Visa credit card download to digital wallet", "imani", "ACCOUNT","06:31 PM","12"
+"Account statements shipped to home address", "nyla", "ACCOUNT","06:31 PM","10"
+"Wire transfer  of amount above threshold", "nyla", "ACCOUNT","06:33 PM","11"
+"Visa credit card download to digital wallet", "nyla", "ACCOUNT","06:31 PM","12"
+"pan: 4111XXXXXX2222, amount: 100.00, date: 1-7-2026 19:12:34 terminal_id: TERM_88291, merchant_id: MERCH_55432","peter","SALE","07:15 PM","01"
+"pan: 4111XXXXXX2222, amount: 100.00, date: '1-7-2026 19:12:34' terminal_id: TERM_88291, merchant_id: MERCH_55432","peter","SALE","07:15 PM","02"
+"pan: 4111XXXXXX2222, amount: 1000.01, date: '1-7-2026 19:17:32' terminal_id: TERM_88291, merchant_id: MERCH_5555","peter","SALE","07:17 PM","03"
+"pan: 4111XXXXXX2222, amount: 1.01, date: '1-7-2026 19:19:32' terminal_id: TERM_88291, merchant_id: MERCH_55432","peter","SALE","07:19 PM","04"
+"pan: 4111XXXXXX2222, amount: 0.01, date: '1-7-2026 19:17:32' terminal_id: TERM_88291, merchant_id: MERCH_55432","peter","SALE","07:17 PM","05"
+"pan: 4111XXXXXX2222, amount: 1.01, date: '1-7-2026 19:19:32' terminal_id: TERM_88291, merchant_id: MERCH_55432","peter","SALE","07:19 PM","06"
+"pan: 4111XXXXXX2222, amount: 5.01, date: '1-7-2026 19:20:32' terminal_id: TERM_88291, merchant_id: MERCH_5555","peter","SALE","07:20 PM","07"
+"pan: 4111XXXXXX2222, amount: 100.00, date: '1-7-2026 19:12:34' terminal_id: TERM_88291, merchant_id: MERCH_55432,"peter","SALE","07:15 PM","08"
+"pan: 4333XXXXXX3333, amount: 100.00, date: 1-7-2026 19:12:34 terminal_id: TERM_88291, merchant_id: MERCH_55432","james","SALE","07:15 PM","01"
+"pan: 4333XXXXXX3333, amount: 100.00, date: '1-7-2026 19:12:34' terminal_id: TERM_88291, merchant_id: MERCH_55432","james","SALE","07:15 PM","02"
+"pan: 4333XXXXXX3333, amount: 1000.01, date: '1-7-2026 19:17:32' terminal_id: TERM_88291, merchant_id: MERCH_5555","james","SALE","07:17 PM","03"
+"pan: 4333XXXXXX3333, amount: 1.01, date: '1-7-2026 19:19:32' terminal_id: TERM_88291, merchant_id: MERCH_55432","james","SALE","07:19 PM","04"
+"pan: 4333XXXXXX3333, amount: 0.01, date: '1-7-2026 19:17:32' terminal_id: TERM_88291, merchant_id: MERCH_55432","james","SALE","07:17 PM","05"
+"pan: 4333XXXXXX3333, amount: 1.01, date: '1-7-2026 19:19:32' terminal_id: TERM_88291, merchant_id: MERCH_55432","james","SALE","07:19 PM","06"
+"pan: 4333XXXXXX3333, amount: 5.01, date: '1-7-2026 19:20:32' terminal_id: TERM_88291, merchant_id: MERCH_5555","james","SALE","07:20 PM","07"
+"pan: 4333XXXXXX3333, amount: 100.00, date: '1-7-2026 19:12:34' terminal_id: TERM_88291, merchant_id: MERCH_55432,"james","SALE","07:15 PM","08"
+"pan: 4333XXXXXX3333, amount: 100.00, date: 1-7-2026 19:12:34 terminal_id: TERM_88291, merchant_id: MERCH_55432","james","SALE","07:15 PM","01"
+"pan: 4333XXXXXX3333, amount: 100.00, date: '1-7-2026 19:12:34' terminal_id: TERM_88291, merchant_id: MERCH_55432","james","SALE","07:15 PM","02"
+"pan: 4333XXXXXX3333, amount: 1000.01, date: '1-7-2026 19:17:32' terminal_id: TERM_88291, merchant_id: MERCH_5555","james","SALE","07:17 PM","03"
+"pan: 4333XXXXXX3333, amount: 1.01, date: '1-7-2026 19:19:32' terminal_id: TERM_88291, merchant_id: MERCH_55432","james","SALE","07:19 PM","04"
+"pan: 4333XXXXXX3333, amount: 0.01, date: '1-7-2026 19:17:32' terminal_id: TERM_88291, merchant_id: MERCH_55432","james","SALE","07:17 PM","05"
+"pan: 4333XXXXXX3333, amount: 1.01, date: '1-7-2026 19:19:32' terminal_id: TERM_88291, merchant_id: MERCH_55432","james","SALE","07:19 PM","06"
+"pan: 4333XXXXXX3333, amount: 5.01, date: '1-7-2026 19:20:32' terminal_id: TERM_88291, merchant_id: MERCH_5555","james","SALE","07:20 PM","07"
+"pan: 4333XXXXXX3333, amount: 100.00, date: '1-7-2026 19:12:34' terminal_id: TERM_88291, merchant_id: MERCH_55432,"james","SALE","07:15 PM","08"

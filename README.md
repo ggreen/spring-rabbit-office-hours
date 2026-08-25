@@ -19,3 +19,13 @@ The following are the high level RabbitMQ streams use cases.
 Example Reference Architecture
 
 ![rabbit-spring-reference-architecture.png](docs/img/rabbit-spring-reference-architecture.png)
+
+
+# Event Streaming Use Cases
+
+1. Pub/Sub 
+2. Replay 
+3. High Throughput 
+4. Scalability 
+5. SQL Filtering
+6. Real Time AI
