@@ -1,31 +1,32 @@
-# spring-rabbit-office-hours
+Spring RabbitMQ Office Hours
 
-This repo focuses on demonstrating RabbitMQ streaming capabilities for spring applications.
+Demonstration repository showcasing **RabbitMQ Streaming capabilities** within **Spring Boot** applications, featuring Super Streams, SQL filtering, and scalable event-driven architectures.
 
-![rabbit-super-streams.png](docs/img/rabbit-super-streams.png)
+---
 
+![RabbitMQ Super Streams Architecture](docs/img/rabbit-super-streams.png)
 
-The following are related publications of the material demonstrated
+## Overview & Architecture
 
+### High-Level Stream Use Cases
+![RabbitMQ Streams Use Cases](docs/img/RabbitMQ-streams-use-cases.png)
 
-- [Spring for Rabbit Super Stream and SQL filters](https://www.youtube.com/watch?v=lbhGFw1GKQ0&vl=en-US) Spring I/O (2026) 
+### Example Reference Architecture
+![Spring RabbitMQ Reference Architecture](docs/img/rabbit-spring-reference-architecture.png)
 
+---
 
-The following are the high level RabbitMQ streams use cases.
+## Core Capabilities
 
-![RabbitMQ-streams-use-cases.png](docs/img/RabbitMQ-streams-use-cases.png)
+* **Pub/Sub Messaging:** Low-latency event publishing and consumption.
+* **Message Replay:** Offset-based time-travel to re-read historic stream data.
+* **High Throughput:** Optimized batch processing and stream protocols.
+* **Scalability:** Horizontal scaling via Super Streams and partitioned queues.
+* **SQL Filtering:** Server-side message filtering before consumer consumption.
+* **Real-Time AI Integration:** Event-driven streaming for AI inference pipelines.
 
+---
 
-Example Reference Architecture
+## Media & Talks
 
-![rabbit-spring-reference-architecture.png](docs/img/rabbit-spring-reference-architecture.png)
-
-
-# Event Streaming Use Cases
-
-1. Pub/Sub 
-2. Replay 
-3. High Throughput 
-4. Scalability 
-5. SQL Filtering
-6. Real Time AI
+* 📺 **[Spring for Rabbit Super Streams and SQL Filters](https://www.youtube.com/watch?v=lbhGFw1GKQ0&vl=en-US)** — *Spring I/O (2026)*
